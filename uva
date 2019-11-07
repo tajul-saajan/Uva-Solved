@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int ara[16],N,M,i,j,k,selected,take;
+    while(scanf("%d%d",&N,&M)!=EOF)
+    {
+        for(i=0;i<M;i++)
+        {
+            scanf("%d",&ara[i]);
+        }
+        selected=1,take=0;
+        for(j=1;j<=N;j++)
+        {
+            for(k=0;k<M;k++)
+            {
+            if (N%ara[k]==0) selected=0;
+            }
+            if(selected==1) take++;
+        }
+        printf("%d\n",take);
+    }
+    return 0;
+}
